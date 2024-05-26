@@ -23,8 +23,8 @@ if (isset($_POST['valider'])) {
 
             try {
                // Insérer dans la table un Utilisateur
-               $stmt2 = $pdo->prepare("INSERT INTO Projets (id_categorie, id_user, photo, lien) VALUES (?, ?, ?, ?)");
-               $stmt2->execute([$cat, $id_user, $fileName, $lien]);
+               $stmt2 = $pdo->prepare("INSERT INTO Projets (id_categorie, titre, id_user, photo, lien) VALUES (?, ?, ?, ?,?)");
+               $stmt2->execute([$cat, $titre, $id_user, $fileName, $lien]);
                $succes = 'Projet ajouté avec succès';
             } catch (PDOException $e) {
                echo $e->getMessage();
@@ -142,7 +142,7 @@ if (isset($_POST['valider'])) {
             <?php
             session_start();
             try {
-               $stmt2 = $pdo->prepare("SELECT p.photo,u.nom,u.prenom,c.nom AS categorie_nom,p.lien FROM Projets p JOIN Users u ON p.id_user = u.id_user JOIN Categories c ON p.id_categorie = c.id_categorie WHERE p.id_user = ?");
+               $stmt2 = $pdo->prepare("SELECT p.titre, p.photo,u.nom,u.prenom,c.nom AS categorie_nom,p.lien FROM Projets p JOIN Users u ON p.id_user = u.id_user JOIN Categories c ON p.id_categorie = c.id_categorie WHERE p.id_user = ?");
                $stmt2->execute([$_SESSION['user']['id_user']]);
                if ($stmt2->rowCount() > 0) {
             ?>
@@ -152,7 +152,7 @@ if (isset($_POST['valider'])) {
                         <div class="text">
                            <h3><?php echo $projets['titre'] ?></h3>
                            <h4>Categorie : <?php echo $projets['categorie_nom'] ?></h4>
-                           <h5><?php echo $projets['nom'] . ' ' . $projets['prenom'] ?></h5>
+                           <h5>Auteur : <?php echo $projets['nom'] . ' ' . $projets['prenom'] ?></h5>
                            <a href=<?php echo $projets['lien'] ?> class="btn">Lien vers le projet <i class="fa-solid fa-arrow-right" target="_blank"></i></a>
                         </div>
                      </div>
