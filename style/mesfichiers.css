@@ -1,0 +1,200 @@
+.mesFichiers {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mesFichiers header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #428bca;
+  padding-bottom: 20px;
+}
+.mesFichiers header h3 {
+  color: #428bca;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+}
+.mesFichiers button {
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #428bca;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  display: none;
+}
+header .close {
+  background-color: red;
+  display: block;
+}
+/* formulaire style */
+.addFichier {
+  padding: 30px;
+  background: linear-gradient(
+    to right,
+    var(--primaryColor),
+    var(--secondaryColor)
+  );
+
+  border-radius: 10px;
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+  margin-top: 30px;
+  transition: display 0.9s ease-in-out;
+  display: block;
+}
+.addFichier.active {
+  transition: all 0.5s ease;
+  display: none;
+}
+.addFichier h3 {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.addFichier form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.cours .input-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.cours .input-label label {
+  color: #fff;
+}
+.cours .input-label input::placeholder {
+  color: #428bca;
+  font-size: 13px;
+}
+.cours .input-label input {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  outline: none;
+  color: #428bca;
+  padding-right: 40px;
+  font-size: 16px;
+  box-shadow: var(--shadow);
+}
+.cours input.submit {
+  padding: 10px;
+  background: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--secondaryColor)
+  );
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  font-size: 17px;
+}
+
+.role-photo {
+  display: flex;
+  gap: 10px;
+}
+#photo {
+  height: 38px;
+}
+#categorie {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #428bca;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+}
+
+/* les messages d'erreurs */
+#error-signUp {
+  text-align: center;
+  background-color: red;
+  font-size: 12px;
+  padding: 6px;
+  color: #fff;
+  border-radius: 5px;
+  display: none;
+}
+/* container fichier style */
+.fichierContainer {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.fichierCard {
+  width: 100%;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--primaryColor),
+    var(--secondaryColor)
+  );
+}
+.fichierCard img {
+  width: 80px;
+}
+.fichierCard .img {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+.fichierCard .text {
+  padding: 20px;
+}
+.fichierCard .text h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.fichierCard .text h3,
+.fichierCard .text h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  color: #ddd;
+}
+.fichierCard .text a {
+  display: block;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 8px;
+  font-weight: 500;
+  color: var(--secondaryColor);
+}

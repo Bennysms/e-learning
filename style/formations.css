@@ -1,0 +1,233 @@
+@import url("./config.css");
+/* formations style */
+.formations {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.formations header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #428bca;
+  padding-bottom: 20px;
+}
+
+.formations header h3 {
+  color: #428bca;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+}
+.formations button {
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #428bca;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+.formations button:nth-child(1) {
+  display: none;
+}
+header .close {
+  background-color: red;
+}
+
+.addFormations {
+  padding: 30px;
+  display: block;
+  background: linear-gradient(
+    to right,
+    var(--primaryColor),
+    var(--secondaryColor)
+  );
+
+  border-radius: 10px;
+  -webkit-box-shadow: var(--shadow);
+  -moz-box-shadow: var(--shadow);
+  box-shadow: var(--shadow);
+  margin: 0 auto;
+  margin-top: 30px;
+  transition: display 0.9s ease-in-out;
+}
+.addFormations.active {
+  transition: all 0.5s ease;
+
+  display: none;
+}
+.addFormations h3 {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.addFormations form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.cours .input-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.cours .input-label label {
+  color: #fff;
+}
+.cours .input-label input::placeholder {
+  color: #428bca;
+  font-size: 13px;
+}
+.cours .input-label input {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+  outline: none;
+  color: #428bca;
+  padding-right: 40px;
+  font-size: 16px;
+  box-shadow: var(--shadow);
+}
+.cours input.submit {
+  padding: 10px;
+  background: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--secondaryColor)
+  );
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  font-size: 17px;
+}
+#desc {
+  border-radius: 10px;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 15px;
+  color: #428bca;
+  height: 100px;
+  box-shadow: var(--shadow);
+}
+
+.role-photo {
+  display: flex;
+  gap: 10px;
+}
+#photo {
+  height: 38px;
+}
+#categorie {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #428bca;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+}
+
+/* les messages d'erreurs */
+#error-signUp {
+  text-align: center;
+  background-color: red;
+  font-size: 12px;
+  padding: 6px;
+  color: #fff;
+  border-radius: 5px;
+}
+/* message de succès */
+#succes {
+  text-align: center;
+  background-color: rgb(12, 93, 5);
+  font-size: 12px;
+  padding: 6px;
+  color: #fff;
+  border-radius: 5px;
+}
+/* design du content */
+.content .header {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.content .header p {
+  font-size: 15px;
+  color: var(--secondaryColor);
+  font-weight: 600;
+}
+.header select {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--secondaryColor);
+  border: 2px solid var(--secondaryColor);
+  outline: none;
+  font-size: 16px;
+}
+
+/* container des videos */
+.videoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  width: 100%;
+  margin-top: 30px;
+  row-gap: 40px;
+}
+.videoBox {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+.videoBox video {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+}
+.videoBox img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.contentText {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+}
+.contentText h2 {
+  font-size: 16px;
+  color: #0f0f0f;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.contentText p {
+  font-size: 12px;
+  color: #606060;
+  font-weight: 500;
+  margin-bottom: 2px;
+}

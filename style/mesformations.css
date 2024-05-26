@@ -1,0 +1,144 @@
+.mesFormations {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mesFormations header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #428bca;
+  padding-bottom: 20px;
+}
+.mesFormations header h3 {
+  color: #428bca;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+}
+.mesFormations button {
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #428bca;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+header .close {
+  background-color: red;
+  display: none;
+}
+/* mes formations container */
+.contentFichier {
+  margin-top: 30px;
+  display: none;
+}
+.contentFichier.active {
+  display: block;
+}
+.mesFormationsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  width: 100%;
+  row-gap: 40px;
+  margin-top: 30px;
+}
+.videoBox {
+  width: 100%;
+  height: 300px;
+  display: block;
+}
+.videoBox video {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+}
+.videoBox img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.contentText {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+}
+.contentText h2 {
+  font-size: 16px;
+  color: #0f0f0f;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.contentText p {
+  font-size: 12px;
+  color: #606060;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+/* container fichier style */
+.fichierContainer {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.header-h2 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--secondaryColor);
+}
+.fichierCard {
+  width: 100%;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    var(--primaryColor),
+    var(--secondaryColor)
+  );
+}
+.fichierCard img {
+  width: 80px;
+}
+.fichierCard .img {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+.fichierCard .text {
+  padding: 20px;
+}
+.fichierCard .text h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 5px;
+}
+.fichierCard .text h3,
+.fichierCard .text h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 3px;
+  color: #ddd;
+}
+.fichierCard .text a {
+  display: block;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 8px;
+  font-weight: 500;
+  color: var(--secondaryColor);
+}

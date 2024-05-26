@@ -1,0 +1,144 @@
+@import url("./config.css");
+
+#indexPage {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.container-compte {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(
+      rgba(63, 138, 158, 0.654),
+      rgba(63, 138, 158, 0.538)
+    ),
+    url("../images/bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* les messages d'erreurs */
+/* error message style */
+#error,
+#error-signUp {
+  text-align: center;
+  background-color: red;
+  font-size: 12px;
+  padding: 6px;
+  color: #fff;
+  border-radius: 5px;
+}
+#succes {
+  text-align: center;
+  background-color: rgb(12, 93, 5);
+  font-size: 12px;
+  padding: 6px;
+  color: #fff;
+  border-radius: 5px;
+}
+.login,
+.signup {
+  background-color: rgba(255, 255, 255, 0.515);
+  padding: 30px;
+  border-radius: 15px;
+  width: 600px;
+  box-shadow: var(--shadow);
+}
+.container-compte form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.container-compte form .input-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+.container-compte h3 {
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  font-size: 24px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.container-compte form .input-label i {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+}
+.container-compte form .input-label label {
+  color: #408a9e;
+}
+.container-compte form .input-label input::placeholder {
+  color: #fff;
+  font-size: 13px;
+}
+.container-compte form .input-label input {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #408a9e;
+  outline: none;
+  color: #fff;
+  padding-right: 40px;
+  font-size: 16px;
+}
+.container-compte form input.submit {
+  padding: 10px;
+  background-color: #f3953e;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.use-compte {
+  text-align: center;
+  color: white;
+}
+.use-compte a {
+  text-decoration: underline;
+  color: #408a9e;
+  font-weight: 600;
+}
+.mdp {
+  display: flex;
+  gap: 10px;
+}
+.signup .name {
+  display: flex;
+  gap: 10px;
+}
+.role-photo {
+  display: flex;
+  gap: 10px;
+}
+#photo {
+  height: 38px;
+}
+#role {
+  width: 100%;
+  height: 100%;
+  background-color: #408a9e;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
